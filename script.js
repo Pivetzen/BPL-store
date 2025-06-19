@@ -57,7 +57,7 @@ fetch(csvUrl)
   .then(data => {
     const linhas = data.trim().split("\n").slice(1);
     todosProdutos = linhas.map(linha => {
-      const colunas = linha.split(";");
+      const colunas = linha.split(",");
       return {
         nome: colunas[0]?.trim() || "",
         imagem: colunas[1]?.trim().replace(/^"|"$/g, "") || "",
