@@ -62,3 +62,29 @@ body {
     flex: 1;
   }
 }
+.header {
+  background-color: #2e7d32; /* verde escuro */
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.header h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
