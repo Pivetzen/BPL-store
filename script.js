@@ -59,12 +59,12 @@ fetch(csvUrl)
     todosProdutos = linhas.map(linha => {
       const colunas = linha.split(";");
       return {
-        nome: colunas[0] || "",
-        imagem: colunas[1] || "",
-        categoria: colunas[2] || "",
-        plataforma: colunas[3] || "",
-        link: colunas[4] || "",
-        descricao: colunas[5] || ""
+        nome: colunas[0]?.trim() || "",
+        imagem: colunas[1]?.trim().replace(/^"|"$/g, "") || "",
+        categoria: colunas[2]?.trim() || "",
+        plataforma: colunas[3]?.trim() || "",
+        link: colunas[4]?.trim() || "",
+        descricao: colunas[5]?.trim() || ""
       };
     }).filter(p => p.nome && p.imagem && p.link);
 
