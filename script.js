@@ -5,6 +5,10 @@ let todosProdutos = [];
 function renderizarProdutos(produtos) {
   const container = document.getElementById("produtos");
   container.innerHTML = "";
+  if (produtos.length === 0) {
+    container.innerHTML = "<p>Nenhum produto encontrado.</p>";
+    return;
+  }
   produtos.forEach(({ nome, imagem, categoria, plataforma, link, descricao }) => {
     const card = `
       <div class="card">
@@ -55,14 +59,14 @@ fetch(csvUrl)
     todosProdutos = linhas.map(linha => {
       const colunas = linha.split(";");
       return {
-        nome: colunas[0],
-        imagem: colunas[1],
-        categoria: colunas[2],
-        plataforma: colunas[3],
-        link: colunas[4],
-        descricao: colunas[5]
+        nome: colunas[0] || "",
+        imagem: colunas[1] || "",
+        categoria: colunas[2] || "",
+        plataforma: colunas[3] || "",
+        link: colunas[4] || "",
+        descricao: colunas[5] || ""
       };
-    });
+    }).filter(p => p.nome && p.imagem && p.link);
 
     preencherFiltros(todosProdutos);
     renderizarProdutos(todosProdutos);
