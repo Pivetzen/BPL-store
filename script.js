@@ -66,7 +66,7 @@ fetch(csvUrl)
         link: colunas[4]?.trim() || "",
         descricao: colunas[5]?.trim() || ""
       };
-    }).filter(p => p.nome && p.imagem && p.link);
+    }).//filter(p => p.nome && p.imagem && p.link);
 
     preencherFiltros(todosProdutos);
     renderizarProdutos(todosProdutos);
