@@ -1,4 +1,4 @@
-const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSqBY9LXfTyif_BuZHFcqtSFDvFSRrlNV-jSSgMoRa7uoKbDyrYL0yQD2csS-94Yagik_7YRGk-xm39/pub?gid=0&single=true&output=csv";
+const csvUrl = "https://docs.google.com/spreadsheets/d/e/1UhBbqJWQwlzr-Gtscqr3_fCGRnlklJV8W8Kv_3oHtnI/pub?gid=0&single=true&output=csv";
 
 let todosProdutos = [];
 
